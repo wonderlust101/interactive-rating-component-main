@@ -47,7 +47,8 @@
     }
 
     &:hover {
-      background-color: var(--clr-white);
+      background-color: var(--clr-primary-color-orange);
+
     }
 
     &::before {
@@ -57,7 +58,7 @@
       border-radius: 50%;
       transform: scale(0);
       transition: transform 0.15s ease-in-out;
-      background-color: var(--clr-primary-color-orange);
+      background-color: var(--clr-white);
     }
 
     &:checked::before {
