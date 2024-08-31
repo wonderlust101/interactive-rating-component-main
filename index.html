@@ -7,40 +7,76 @@
     <!--     <meta name="title" content="title"> -->
     <!--     <meta name="description" content="description"> -->
 
-    <title>Document</title>
-    <!--         <link rel="icon" href="assets/images/favicon.png" /> -->
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
     <link rel="stylesheet" href="assets/css/main.css"/>
 
-    <!--Remove later-->
-    <style>
-        @font-face {
-            font-family: 'VT323';
-            src: url('assets/fonts/DotGothic16-Regular.ttf');
-        }
-
-        * {
-            font-family: 'VT323', sans-serif;
-            font-size: 120px;
-        }
-    </style>
-    <!--Remove later-->
 </head>
 <body>
-    <div style="display: grid; height: 100vh;">
-        <div style="width: 100%; background-color:var(--clr-primary-color-star-dust); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-election-night)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-crackled); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-fading-horizon)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-neon-spring); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-iris-royale)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-iris-royale); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-neon-spring)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-fading-horizon); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-crackled)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-election-night);display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-star-dust)">Neon Genesis Evangelion</h1></div>
-    </div>
+    <header class="sr-only">
+        <h1>Interactive rating component</h1>
+    </header>
+
+    <main class="card rating-card">
+        <section id="header" class="header-layout">
+            <img class="star_icon" src="assets/images/icon-star.svg" alt="">
+            <div class="header-layout__text">
+                <h2>How did we do?</h2>
+
+                <p>Please let us know how we did with your support request. All feedback is appreciated
+                    to help us improve our offering!</p>
+            </div>
+        </section>
+
+        <form id="rating-form" action="">
+            <fieldset class="rating">
+                <legend class="sr-only">Rate our service</legend>
+
+                <div class="rating__flex">
+                    <div class="rating__container">
+                        <input class="rating__radio" type="radio" name="rating" id="rating-1" value="1">
+                        <label class="rating__number" for="rating-1" aria-label="1 out of 5">1</label>
+                    </div>
+
+                    <div class="rating__container">
+                        <input class="rating__radio" type="radio" name="rating" id="rating-2" value="2">
+                        <label class="rating__number" for="rating-2" aria-label="2 out of 5">2</label>
+                    </div>
+
+                    <div class="rating__container">
+                        <input class="rating__radio" type="radio" name="rating" id="rating-3" value="3">
+                        <label class="rating__number" for="rating-3" aria-label="3 out of 5">3</label>
+                    </div>
+
+                    <div class="rating__container">
+                        <input class="rating__radio" type="radio" name="rating" id="rating-4" value="4">
+                        <label class="rating__number" for="rating-4" aria-label="4 out of 5">4</label>
+                    </div>
+
+                    <div class="rating__container">
+                        <input class="rating__radio" type="radio" name="rating" id="rating-5" value="5">
+                        <label class="rating__number" for="rating-5" aria-label="5 out of 5">5</label>
+                    </div>
+                </div>
+
+                <button class="button rating-button">Submit</button>
+            </fieldset>
+        </form>
+
+        <section id="results" class="thanks-layout">
+            <img src="assets/images/illustration-thank-you.svg" alt="">
+
+            <p id="results-message" class="thanks-layout__results">You selected 0 out of 5</p>
+
+            <div class="thanks-layout__text">
+                <h2>Thank you!</h2>
+
+                <p>We appreciate you taking the time to give a rating. If you ever need more support,
+                    don’t hesitate to get in touch!</p>
+            </div>
+        </section>
+    </main>
 
     <script src="assets/scripts/index.js"></script>
 </body>

@@ -1,0 +1,11 @@
+.button {
+  padding: 1rem 3rem;
+  background-color: var(--clr-primary-color-orange);
+  border-radius: 50rem;
+  cursor: pointer;
+  transition: background-color 0.10s ease-in;
+
+  &:hover {
+    background-color: var(--clr-white);
+  }
+}

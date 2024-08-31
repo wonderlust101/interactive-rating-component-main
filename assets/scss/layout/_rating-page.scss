@@ -1,0 +1,41 @@
+.header-layout {
+  display: grid;
+  gap: 2rem;
+  &__text {
+    display: grid;
+    gap: .5rem;
+  }
+}
+
+.star_icon {
+  background-color: var(--clr-primary-color-dark-blue);
+  padding: 1rem;
+  border-radius: 50rem;
+}
+
+.rating-card {
+  width: min(90%, 30rem);
+}
+
+.rating-button {
+  width: 100%;
+}
+
+.thanks-layout {
+  display: none;
+  gap: 2rem;
+  justify-items: center;
+  text-align: center;
+
+  &__text {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__results {
+    padding: 0.25rem 0.75rem 0.1rem 0.75rem;
+    color: var(--clr-primary-color-orange);
+    background-color: var(--clr-primary-color-dark-blue);
+    border-radius: 50rem;
+  }
+}
